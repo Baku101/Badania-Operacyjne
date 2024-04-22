@@ -1,4 +1,7 @@
-def znajdx_najmniejsze_wiersze(macierz: list[list[int]]) -> list[int]:
+from setup import *
+
+
+def znajdx_najmniejsze_wiersze(macierz: Macierz) -> list[float]:
     """
     Funkcja znajdująca najmniejszy element w każdym z wierszy macierzy.
 
@@ -15,7 +18,7 @@ def znajdx_najmniejsze_wiersze(macierz: list[list[int]]) -> list[int]:
     return najmniejsze_elementy
 
 
-def znajdx_najmniejsze_kolumny(macierz: list[list[int]]) -> list[int]:
+def znajdx_najmniejsze_kolumny(macierz: Macierz) -> list[float]:
     """
     Funkcja znajdująca najmniejszy element w każdej z kolumn macierzy.
 
@@ -32,7 +35,7 @@ def znajdx_najmniejsze_kolumny(macierz: list[list[int]]) -> list[int]:
     return najmniejsze_elementy
 
 
-def redukcja_macierzy(macierz: list[list[int]]) -> tuple[list[list[int]], int]:
+def redukcja_macierzy(macierz: Macierz) -> tuple[Macierz, float]:
     """
     Funkcja redukująca podaną macierz.
 
