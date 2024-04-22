@@ -1,10 +1,10 @@
-# Badania-Operacyjne
+## Metoda Węgierska - Badania Operacyjne 1
 
-
-Schemat ogólny algorytmu (redukcja całkowita, rozwiązanie) - wszyscy
-Redukcja macierzy - Szymon
-Algorytm wyznaczania zer niezależnych - Bartek
-Algorytm wykreślania zer macierzy minimalną liczbą linii - Artur
-Krok zwiększania liczby zer niezależnych - Szymon
-Zadanie 2 - Bartek
-Zadanie 3 - Artur
+### Zadania do zrealizowania:
+* Zadanie 1:
+  * redukcja macierzy - Szymon,
+  * algorytm wyznaczania zer niezależnych - Bartek,
+  * algorytm wykreślania zer macierzy minimalną liczbą linii - Artur,
+  * krok zwiększania liczby zer niezależnych - Szymon.
+* Zadanie 2 - Bartek,
+* Zadanie 3 - Artur.
