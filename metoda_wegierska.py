@@ -101,8 +101,9 @@ def main():
          [6, 4, 3, 7, 2],
          [6, 9, 0, 4, 0],
          [4, 1, 2, 4, 0]]
-    M1 = metoda_wegierska(M, display=True)
+    M1, phi = metoda_wegierska(M, display=True)
     wyswietl_macierz(M1)
+    print("Wartość funkcji celu:", phi)
 
 
 if __name__ == '__main__':
