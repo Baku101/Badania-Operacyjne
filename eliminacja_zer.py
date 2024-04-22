@@ -36,9 +36,10 @@ def eliminacja_zer(M):
     # Usuwanie wierszy
     M = [rzad for index, rzad in enumerate(M) if index in wiersz]
     # Indeks usuniętych wierszy
-    usun_wiersz = [i for i in range(rozmiar) if i not in wiersz]
-
-    return M, usun_wiersz, kolumna
+    usun_wiersz = [i for i in range(rozmiar) if i in wiersz]
+    usun_kolumna = [i for i in range(rozmiar) if i not in kolumna]
+    
+    return M, usun_wiersz, usun_kolumna
 
 
 M = [['0*', '0/', 1, '0/', 5],
