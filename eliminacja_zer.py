@@ -6,9 +6,7 @@ def eliminacja_zer(M):
     zero_zal = "0/"
     rozmiar = len(M)
     wiersz = [i for i in range(rozmiar)]
-    nowy_wiersz = [i for i in range(rozmiar)]
     kolumna = []
-    nowa_kolumna = [i for i in range(rozmiar)]
     linie = 0
 
     # 1. Poszukiwanie maksymalnego skojarzenia
@@ -33,13 +31,14 @@ def eliminacja_zer(M):
     # Wypadek, w którym liczba linii kryjących wartości jest równa liczbie zer niezależnych
     if linie == rozmiar:
         return "Liczba linii odpowiada wielkości macierzy"
-
     # Usuwanie kolumn
     M = [[rzad[i] for i in range(rozmiar) if i not in kolumna] for rzad in M]
     # Usuwanie wierszy
     M = [rzad for index, rzad in enumerate(M) if index in wiersz]
+    # Indeks usuniętych wierszy
+    usun_wiersz = [i for i in range(rozmiar) if i not in wiersz]
 
-    return M
+    return M, usun_wiersz, kolumna
 
 
 M = [['0*', '0/', 1, '0/', 5],
@@ -50,9 +49,11 @@ M = [['0*', '0/', 1, '0/', 5],
 
 
 def main():
-    macierz = eliminacja_zer(M)
+    macierz, wiersz, kolumna = eliminacja_zer(M)
     for rzad in macierz:
         print(rzad)
+    print(wiersz)
+    print(kolumna)
 
 
 main()
