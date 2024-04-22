@@ -1,6 +1,9 @@
+from setup import *
 # Algorytm wyznaczający minimalny zbiór linii wykreślających wszystkie zera z macierzy.
 # Macierz = list(list)
-def eliminacja_zer(M):
+
+
+def eliminacja_zer(M: Macierz) -> tuple[Macierz, list[int], list[int]] | None:
 
     zero_niezal = "0*"
     zero_zal = "0/"
@@ -30,7 +33,7 @@ def eliminacja_zer(M):
                 linie += 1
     # Wypadek, w którym liczba linii kryjących wartości jest równa liczbie zer niezależnych
     if linie == rozmiar:
-        return "Liczba linii odpowiada wielkości macierzy"
+        return None
     # Usuwanie kolumn
     M = [[rzad[i] for i in range(rozmiar) if i not in kolumna] for rzad in M]
     # Usuwanie wierszy
@@ -42,14 +45,12 @@ def eliminacja_zer(M):
     return M, usun_wiersz, usun_kolumna
 
 
-M = [['0*', '0/', 1, '0/', 5],
-     [1, 6, 2, '0*', 3],
-     [1, 2, 1, 5, '0*'],
-     [3, 9, '0*', 4, '0/'],
-     [1, 1, 2, 4, '0/']]
-
-
 def main():
+    M = [['0*', '0/', 1, '0/', 5],
+         [1, 6, 2, '0*', 3],
+         [1, 2, 1, 5, '0*'],
+         [3, 9, '0*', 4, '0/'],
+         [1, 1, 2, 4, '0/']]
     macierz, wiersz, kolumna = eliminacja_zer(M)
     for rzad in macierz:
         print(rzad)
@@ -57,4 +58,5 @@ def main():
     print(kolumna)
 
 
-main()
+if __name__ == '__main__':
+    main()
