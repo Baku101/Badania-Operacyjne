@@ -96,15 +96,27 @@ def metoda_wegierska(macierz: Macierz, display: bool = False) -> tuple[Macierz, 
 
 
 def main():
-    M = [[5, 2, 3, 2, 7],
-         [6, 8, 4, 2, 5],
-         [6, 4, 3, 7, 2],
-         [6, 9, 0, 4, 0],
-         [4, 1, 2, 4, 0]]
+    print('macierz 1')
+    M = [[5, 2, 3, 2, 7, 2],
+         [6, 8, 4, 2, 5, 4],
+         [6, 4, 3, 7, 2, 3],
+         [6, 9, 0, 4, 0, 8],
+         [4, 1, 2, 4, 0, 6],
+         [2, 4, 3, 8, 6, 0],]
     M1, phi = metoda_wegierska(M, display=True)
     wyswietl_macierz(M1)
     print("Wartość funkcji celu:", phi)
 
+    print('\nmacierz 2')
+    MM = [[5, 2, 9, 4, 8, 1],
+          [3, 7, 6, 2, 5, 9],
+          [1, 4, 8, 3, 6, 7],
+          [9, 6, 2, 5, 1, 4],
+          [8, 3, 7, 9, 3, 5],
+          [4, 4, 5, 8, 7, 3]]
+    M2, phi2 = metoda_wegierska(MM, display=True)
+    wyswietl_macierz(M2)
+    print("Wartość funkcji celu:", phi2)
 
 if __name__ == '__main__':
     main()
